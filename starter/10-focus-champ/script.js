@@ -9,9 +9,51 @@ Au focus sur le champ, vide-le et change sa couleur de fond. Lorsqu'on clique en
 */
 
 // Un seul champ
+/*const focusSurname = document.getElementById('prenom');
+focusSurname.addEventListener('focus', (evt) => {
+    evt.target.style.background = 'green'
+})
+focusSurname.addEventListener('blur', (evt) => {
+    evt.target.style.background = ''
+})*/
 
 
 // Deux champs
 
+/*const focusSurname = document.getElementById('prenom');
+const focusName = document.getElementById('nom');
+
+focusSurname.addEventListener('focus', (evt) => {
+    evt.target.style.background = 'green'
+})
+focusSurname.addEventListener('blur', (evt) => {
+    evt.target.style.background = ''
+})
+
+focusName.addEventListener('focus', (evt) => {
+    evt.target.style.background = 'green'
+})
+focusName.addEventListener('blur', (evt) => {
+    evt.target.style.background = ''
+})*/
+
 
 // Plusieurs champs
+
+
+(function () {
+    const app = {
+        inputTexts: document.querySelectorAll("input[type='text']"),
+        init() {
+            for (const inputTextElement of this.inputTexts) {
+                inputTextElement.addEventListener('focus', (evt) => {
+                    evt.target.style.background = 'green'
+                })
+                inputTextElement.addEventListener('blur', (evt) => {
+                    evt.target.style.background = ''
+                })
+            }
+        }
+    }
+    app.init()
+})()

@@ -42,7 +42,19 @@ MÉTHODE :
 3. ajouter à ce bouton un gestionnaire d'événement avec la méthode  addEventListener() qui va écouter le clic (événement click) et qui, au clic sur le bouton,  déclenchera l'appel de la fonction direbonjour.
 */
 
+// Méthode 1
+function clicked(event) {
+    event.currentTarget.textContent = 'Jean !'
+    event.currentTarget.style.backgroundColor = 'green'
+    console.log('Bonjour !')
+}
 
+document.getElementById('hello').addEventListener('click', clicked)
+
+// Méthode 2 (recommandé)
+document.getElementById('hello').addEventListener('click', () => {
+    console.log('Bonjour !')
+})
 
 
 // Autre écriture : avec une fonction anonyme

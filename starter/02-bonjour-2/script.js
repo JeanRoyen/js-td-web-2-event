@@ -11,6 +11,11 @@
    * 3°) avec une arrow fonction et une expression conditionnelle
 */
 
+function clicked(event) {
+    document.querySelector('.explain').insertAdjacentHTML('beforeend', '<p>Bonjour Jean ! </p>')
+}
+
+document.getElementById('hello').addEventListener('click', clicked)
 
 // Autre écriture
 
